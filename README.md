@@ -1,2 +1,54 @@
 # terraform-sandbox
-testing out terraform 
+to practice terraform 
+
+**Requires Terraform (minimum) v0.14**
+
+## Steps Required
+
+## Initialise Terraform
+
+```
+$ terraform init --upgrade
+```
+
+## Create a workspace for the prospect (Optional)
+
+```
+$ terraform workspace new <my_prospect/name>
+```
+Where `<my_prospect/name>` is the company name of the prospect
+
+## Review the execution plan
+
+```
+$ terraform plan -var="access_token=<token>" -var="realm=<realm>"
+```
+
+Where `<token>` is the Splunk Access Token (found in settings --> access token) and `<realm>` is either `eu0`, `us0`, `us1` or `us2` (found in user profile)
+
+## Apply the changes
+
+```
+$ terraform apply -var="access_token=<token>" -var="realm=<realm>"
+```
+
+## Destroy everything!
+
+If you created a workspace you will first need to ensure you are in the correct workspace e.g.
+
+```
+$ terraform workspace select <my_prospect/name>
+```
+Where `<my_prospect/name>` is the company name of the prospect
+
+```
+$ terraform destroy -var="access_token=<token>" -var="realm=<realm>"
+```
+
+# Deploying a module
+
+```
+terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.aws
+terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.dashboards
+terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.gcp
+```
