@@ -1,10 +1,11 @@
 # terraform-sandbox
 to practice terraform 
 
-**Requires Terraform (minimum) v0.14**
+## Requirements
+1. Splunk instance with access token
+2. [Terraform (minimum) v0.14](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/certification-associate-tutorials)
 
-## Steps Required
-
+# Steps
 ## Initialise Terraform
 
 ```
@@ -45,7 +46,7 @@ Where `<my_prospect/name>` is the company name of the prospect
 $ terraform destroy -var="access_token=<token>" -var="realm=<realm>"
 ```
 
-# Deploying a module
+## Deploying a module
 
 ```
 terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.aws
@@ -54,5 +55,5 @@ terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.
 ```
 
 # Resources 
-[tjohander's brain and repo](https://github.com/tjohander-splunk/charts-as-code)
-[signalfx terraform registry](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs)
+- [tjohander's brain and repo](https://github.com/tjohander-splunk/charts-as-code)
+- [signalfx terraform registry](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs)
