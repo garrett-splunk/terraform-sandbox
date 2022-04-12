@@ -45,7 +45,7 @@ $ terraform destroy -var="access_token=<token>" -var="realm=<realm>"
 ```
 
 ## Deploying a module
-
+After adding additional modules in modules folder - examples of applying:
 ```
 terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.aws
 terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.dashboards
