@@ -52,3 +52,7 @@ terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.
 terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.dashboards
 terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.gcp
 ```
+
+# Resources 
+[tjohander's brain and repo](https://github.com/tjohander-splunk/charts-as-code)
+[signalfx terraform registry](https://registry.terraform.io/providers/splunk-terraform/signalfx/latest/docs)
