@@ -87,7 +87,7 @@ resource "signalfx_time_chart" "hostsbydatacenter0" {
 }
 
 resource "signalfx_dashboard" "dashboard0" {
-  name            = "My Team Dashboad"
+  name            = "My Team Dashboard"
   dashboard_group = signalfx_dashboard_group.dashboardgroup0.id
   time_range      = "-1h"
 
