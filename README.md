@@ -1,11 +1,9 @@
 # terraform-sandbox
-to practice terraform 
 
 ## Requirements
 1. Splunk instance with access token
 2. [Terraform (minimum) v0.14](https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/certification-associate-tutorials)
 
-# Steps
 ## Initialise Terraform
 
 ```
