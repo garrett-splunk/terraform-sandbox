@@ -44,7 +44,7 @@ Where `<my_prospect/name>` is the company name of the prospect
 $ terraform destroy -var="access_token=<token>" -var="realm=<realm>"
 ```
 
-## Deploying a module
+## Deploying a module (additional/optional)
 After adding additional modules in modules folder - examples of applying:
 ```
 terraform apply -var="access_token=<token>" -var="realm=<realm>" -target=module.aws
